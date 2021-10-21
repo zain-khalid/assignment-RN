@@ -1,0 +1,246 @@
+{
+    "info": {
+        "_postman_id": "13c76e16-d5e8-47f0-8d34-213c14df5741",
+        "name": "Assessment Todo API",
+        "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Login",
+            "id": "0265179c-bdca-4065-a061-011d9dbe1054",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Accept",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "formdata",
+                    "formdata": [
+                        {
+                            "key": "email",
+                            "value": "faisal@base29.com",
+                            "type": "text"
+                        },
+                        {
+                            "key": "password",
+                            "value": "jannat",
+                            "type": "text"
+                        }
+                    ]
+                },
+                "url": "http://54.144.155.145/api/login"
+            },
+            "response": []
+        },
+        {
+            "name": "Register",
+            "id": "b900dc36-43b2-44a6-a66f-eccc89c1c6bc",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Accept",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "formdata",
+                    "formdata": [
+                        {
+                            "key": "email",
+                            "value": "test11111@text.com",
+                            "type": "text"
+                        },
+                        {
+                            "key": "password",
+                            "value": "jannat",
+                            "type": "text"
+                        },
+                        {
+                            "key": "password_confirmation",
+                            "value": "jannat",
+                            "type": "text"
+                        }
+                    ]
+                },
+                "url": "http://54.144.155.145/api/register"
+            },
+            "response": []
+        },
+        {
+            "name": "Logout",
+            "id": "2ec250fb-e385-473c-a5fa-b7bef3d57015",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Accept",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "formdata",
+                    "formdata": [
+                        {
+                            "key": "token",
+                            "value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTYyMDg0Nzc5MSwiZXhwIjoxNjIwODUxMzkxLCJuYmYiOjE2MjA4NDc3OTEsImp0aSI6Ind5RkgyeHFRWkRQcVZTcmsiLCJzdWIiOjEsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.OK8ma8DSVYSmX8WHEFAb7y10_8dOt0CvTYZ1STkmMC0",
+                            "type": "text"
+                        }
+                    ]
+                },
+                "url": "http://54.144.155.145/api/logout"
+            },
+            "response": []
+        },
+        {
+            "name": "Get Todo Items",
+            "id": "a0f7f15a-dfbe-470e-bde5-ec8483795a3e",
+            "request": {
+                "auth": {
+                    "type": "bearer",
+                    "bearer": {
+                        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTYyMTQ4ODM4MywiZXhwIjoxNjIxNDkxOTgzLCJuYmYiOjE2MjE0ODgzODMsImp0aSI6IndZTVk5cXJldHc2bnpEVVIiLCJzdWIiOjIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.9QeepcU4SdAxEcqzuE-Mtpz37BIrPiXedbyG1Fh9rU4"
+                    }
+                },
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "Accept",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "url": "http://54.144.155.145/api/items"
+            },
+            "response": []
+        },
+        {
+            "name": "Create Todo Item",
+            "id": "64450da8-8b36-4882-bf8b-d8cb9fb078a7",
+            "request": {
+                "auth": {
+                    "type": "bearer",
+                    "bearer": {
+                        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTYyMTAyMjk2MSwiZXhwIjoxNjIxMDI2NTYxLCJuYmYiOjE2MjEwMjI5NjEsImp0aSI6InZ4a3N5cm9QMXFHM0lJalYiLCJzdWIiOjIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.RJWDZKH8LjpsayK_Dwn0DtDkU7xwaMw_iiJ3A1cwGgY"
+                    }
+                },
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Accept",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "formdata",
+                    "formdata": [
+                        {
+                            "key": "title",
+                            "value": "Feed Cats",
+                            "type": "text"
+                        },
+                        {
+                            "key": "description",
+                            "value": "Time to feed the cats",
+                            "type": "text"
+                        }
+                    ]
+                },
+                "url": "http://54.144.155.145/api/item"
+            },
+            "response": []
+        },
+        {
+            "name": "Update Item",
+            "id": "600896da-754b-4f32-b320-39c7617b4537",
+            "request": {
+                "auth": {
+                    "type": "bearer",
+                    "bearer": {
+                        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTYyMTAyMjk2MSwiZXhwIjoxNjIxMDI2NTYxLCJuYmYiOjE2MjEwMjI5NjEsImp0aSI6InZ4a3N5cm9QMXFHM0lJalYiLCJzdWIiOjIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.RJWDZKH8LjpsayK_Dwn0DtDkU7xwaMw_iiJ3A1cwGgY"
+                    }
+                },
+                "method": "PUT",
+                "header": [
+                    {
+                        "key": "Accept",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "body": {
+                    "mode": "raw",
+                    "raw": "{\n    \"description\": \"Purchase groceries from shop near by\"\n}",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    }
+                },
+                "url": "http://54.144.155.145/api/item/3"
+            },
+            "response": []
+        },
+        {
+            "name": "Delete Item",
+            "id": "d2d8b573-6126-42b1-a4a7-deed1cd7e9d4",
+            "request": {
+                "method": "DELETE",
+                "header": [
+                    {
+                        "key": "Accept",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "url": "http://54.144.155.145/api/item/3"
+            },
+            "response": []
+        },
+        {
+            "name": "Get Single Item",
+            "id": "fd8a7a53-8ffc-4124-a7fb-fa265c763e4f",
+            "request": {
+                "auth": {
+                    "type": "bearer",
+                    "bearer": {
+                        "token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODAwMFwvYXBpXC9sb2dpbiIsImlhdCI6MTYyMTI2MDkwNywiZXhwIjoxNjIxMjY0NTA3LCJuYmYiOjE2MjEyNjA5MDcsImp0aSI6ImcxRkJndkxxd0tOM1pUaVQiLCJzdWIiOjIsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.hEBL22Fk7N1h-JmeyBOAOS-G3TL18jkDJ4t46CHCYnA"
+                    }
+                },
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "Accept",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "url": "http://54.144.155.145/api/item/4"
+            },
+            "response": []
+        },
+        {
+            "name": "Refresh Token",
+            "id": "611e1547-6e2f-43c0-8f46-15b1c01f5002",
+            "request": {
+                "method": "POST",
+                "header": [
+                    {
+                        "key": "Accept",
+                        "value": "application/json",
+                        "type": "text"
+                    }
+                ],
+                "url": "http://54.144.155.145/api/refresh-token/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC81NC4xNDQuMTU1LjE0NVwvYXBpXC9sb2dpbiIsImlhdCI6MTYyOTA5OTUyNywiZXhwIjoxNjI5MTAzMTI3LCJuYmYiOjE2MjkwOTk1MjcsImp0aSI6IkVzbzJUNncyMVZDQXVIU3giLCJzdWIiOjUsInBydiI6IjIzYmQ1Yzg5NDlmNjAwYWRiMzllNzAxYzQwMDg3MmRiN2E1OTc2ZjcifQ.TN7bAGi33Ni3x6yVS8N34wJk8HZrCpIzq1aPY_h8Z_Q\""
+            },
+            "response": []
+        }
+    ]
+}
